@@ -1,5 +1,35 @@
+/**
+ * @GameName :
+ * popstar
+ *
+ * @DevelopTool:
+ * Cocos2d-x Editor (CocosEditor)
+ *
+ * @time
+ * 2014-02-23 pm
+ *
+ * @Licensed:
+ * This showcase is licensed under GPL.
+ *
+ * @Authors:
+ * Programmer: touchSnow
+ *
+ * @Links:
+ * http://www.cocos2d-x.com/ (cocos官方)
+ * https://github.com/makeapp      （github）
+ * http://blog.csdn.net/touchsnow (csdn博客)
+ * http://blog.makeapp.co/ （官方博客）
+ * http://www.cocoseditor.com/ （建设中官网）
+ *
+ * @Contact
+ * 邮箱：zuowen@makeapp.co
+ * qq群：232361142
+ *
+ */
+
 if (sys.platform == 'browser') {
-    var require = function (file) {
+    var require = function (file)
+    {
         var d = document;
         var s = d.createElement('script');
         s.src = file;
@@ -10,24 +40,28 @@ else {
     require("jsb.js");
 }
 
-cc.debug = function (msg) {
+cc.debug = function (msg)
+{
     cc.log(msg);
 }
 
-cc.BuilderReader.replaceScene = function (path, ccbName) {
+cc.BuilderReader.replaceScene = function (path, ccbName)
+{
     var scene = cc.BuilderReader.loadAsSceneFrom(path, ccbName);
     cc.Director.getInstance().replaceScene(scene);
     return scene;
 }
 
-cc.BuilderReader.loadAsScene = function (file, owner, parentSize) {
+cc.BuilderReader.loadAsScene = function (file, owner, parentSize)
+{
     var node = cc.BuilderReader.load(file, owner, parentSize);
     var scene = cc.Scene.create();
     scene.addChild(node);
     return scene;
 };
 
-cc.BuilderReader.loadAsSceneFrom = function (path, ccbName) {
+cc.BuilderReader.loadAsSceneFrom = function (path, ccbName)
+{
     if (path && path.length > 0) {
         cc.BuilderReader.setResourcePath(path + "/");
         return cc.BuilderReader.loadAsScene(path + "/" + ccbName);
@@ -37,7 +71,8 @@ cc.BuilderReader.loadAsSceneFrom = function (path, ccbName) {
     }
 }
 
-cc.BuilderReader.loadAsNodeFrom = function (path, ccbName, owner) {
+cc.BuilderReader.loadAsNodeFrom = function (path, ccbName, owner)
+{
     if (path && path.length > 0) {
         cc.BuilderReader.setResourcePath(path + "/");
         return cc.BuilderReader.load(path + "/" + ccbName, owner);
@@ -47,7 +82,8 @@ cc.BuilderReader.loadAsNodeFrom = function (path, ccbName, owner) {
     }
 }
 
-cc.BuilderReader.runScene = function (module, name) {
+cc.BuilderReader.runScene = function (module, name)
+{
     var director = cc.Director.getInstance();
     var scene = cc.BuilderReader.loadAsSceneFrom(module, name);
     var runningScene = director.getRunningScene();
@@ -62,15 +98,18 @@ cc.BuilderReader.runScene = function (module, name) {
 }
 
 cc.CleanUp = {};
-cc.CleanUp.create = function (sprite) {
-    return cc.CallFunc.create(function () {
+cc.CleanUp.create = function (sprite)
+{
+    return cc.CallFunc.create(function ()
+    {
         sprite.cleanuped = true;
         sprite.removeFromParent(true);
     });
 }
 
 cc.StarParticle = {};
-cc.StarParticle.create = function (node, x, y, name) {
+cc.StarParticle.create = function (node, x, y, name)
+{
     var particle = cc.ParticleSystem.create("Resources/particles/" + name + ".plist");
     particle.setAnchorPoint(cc.p(0.5, 0.5));
     particle.setPosition(cc.p(x, y));
@@ -79,7 +118,8 @@ cc.StarParticle.create = function (node, x, y, name) {
     return particle;
 }
 
-Array.prototype.contains = function (value) {
+Array.prototype.contains = function (value)
+{
     for (var i = 0; i < this.length; i++) {
         if (this[i] == value) {
             return true;
@@ -124,14 +164,16 @@ if (sys.platform == 'browser') {
 
     var Cocos2dXApplication = cc.Application.extend({
         config: document['ccConfig'],
-        ctor: function () {
+        ctor: function ()
+        {
             this._super();
             cc.COCOS2D_DEBUG = this.config['COCOS2D_DEBUG'];
             cc.initDebugSetting();
             cc.setup(this.config['tag']);
             cc.AppController.shareAppController().didFinishLaunchingWithOptions();
         },
-        applicationDidFinishLaunching: function () {
+        applicationDidFinishLaunching: function ()
+        {
             var director = cc.Director.getInstance();
             // director->enableRetinaDisplay(true);
             // director.setDisplayStats(this.config['showFPS']);
@@ -139,7 +181,8 @@ if (sys.platform == 'browser') {
             director.setAnimationInterval(1.0 / this.config['frameRate']);
             var glView = director.getOpenGLView();
             glView.setDesignResolutionSize(720, 1280, cc.RESOLUTION_POLICY.SHOW_ALL);
-            cc.Loader.preload(ccb_resources, function () {
+            cc.Loader.preload(ccb_resources, function ()
+            {
                 cc.BuilderReader.runScene("", "StartLayer");
             }, this);
             return true;

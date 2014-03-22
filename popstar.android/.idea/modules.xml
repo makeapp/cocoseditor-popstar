@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/popstarandroid.iml" filepath="$PROJECT_DIR$/popstarandroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/popstar.android.iml" filepath="$PROJECT_DIR$/popstar.android.iml" />
     </modules>
   </component>
 </project>

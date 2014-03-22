@@ -63,20 +63,7 @@
     <favorites_list name="popstar" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="StartLayer.ccbx" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sources/StartLayer.ccbx">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="Cocos2dx">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -94,9 +81,9 @@
         <option value="$PROJECT_DIR$/Sources/Resources/particles/spark.plist" />
         <option value="$PROJECT_DIR$/Sources/main.xml" />
         <option value="$PROJECT_DIR$/Sources/StartLayer.ccbx" />
-        <option value="$PROJECT_DIR$/Sources/main.js" />
-        <option value="$PROJECT_DIR$/Sources/MainLayer.js" />
         <option value="$PROJECT_DIR$/Sources/StartLayer.js" />
+        <option value="$PROJECT_DIR$/Sources/MainLayer.js" />
+        <option value="$PROJECT_DIR$/Sources/main.js" />
       </list>
     </option>
   </component>
@@ -134,6 +121,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -152,24 +141,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popstar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="popstar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,7 +163,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../popstar.android" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -457,47 +430,48 @@
       <workItem from="1394593207463" duration="3324000" />
       <workItem from="1394622403915" duration="3610000" />
       <workItem from="1394712393682" duration="657000" />
+      <workItem from="1395502343828" duration="782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59000000" />
+    <option name="totallyTimeSpent" value="59782000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Particles&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19667171" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ImagePreview&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20877458" sideWeight="0.17845118" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Particles&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22390318" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3905724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -522,6 +496,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Sources/StartLayer.ccbx">
+      <provider selected="true" editor-type-id="Cocos2dx">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/MainLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="154" column="0" selection-start="3918" selection-end="3918" vertical-scroll-proportion="0.0" vertical-offset="3080" max-vertical-offset="3200" />
@@ -607,19 +591,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Published/MainLayer.ccbx">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1940" />
-      </provider>
       <provider selected="true" editor-type-id="Cocos2dx">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1940" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Published/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580" />
-      </provider>
       <provider selected="true" editor-type-id="MainConfig">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/s_number_member_small.png">
@@ -641,61 +625,56 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/leaf_open.plist">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
       </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/spark.plist">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/spark.plist">
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2240" />
       </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/main.xml">
+      <provider editor-type-id="MainConfig">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="28" selection-start="448" selection-end="448" vertical-scroll-proportion="0.48243994" vertical-offset="39" max-vertical-offset="580">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="MainConfig">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/MainLayer.ccbx">
+      <provider selected="true" editor-type-id="Cocos2dx">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1940">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="Cocos2dx">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/quanquan.plist">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
       </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="11" selection-start="4251" selection-end="4251" vertical-scroll-proportion="0.47089946" vertical-offset="2513" max-vertical-offset="3140" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
@@ -718,35 +697,50 @@
         <state line="37" column="0" selection-start="1502" selection-end="1502" vertical-scroll-proportion="-2.0274725" vertical-offset="858" max-vertical-offset="3680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="-1.1913358" vertical-offset="840" max-vertical-offset="7800" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/StartLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="716" selection-end="777" vertical-scroll-proportion="0.51499116" vertical-offset="488" max-vertical-offset="1540" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/star_packer.plist">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5000" />
+      <provider selected="true" editor-type-id="TexturePacker">
+        <state />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="TexturePacker">
-        <state />
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5000" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/StartLayer.ccbx">
+      <provider selected="true" editor-type-id="Cocos2dx">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="Cocos2dx">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="112" selection-end="112" vertical-scroll-proportion="0.28218696" vertical-offset="0" max-vertical-offset="4000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="3" selection-start="486" selection-end="486" vertical-scroll-proportion="0.97472924" vertical-offset="0" max-vertical-offset="8380">
+          <folding>
+            <element signature="e#0#486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/StartLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="4" selection-start="486" selection-end="486" vertical-scroll-proportion="0.95238096" vertical-offset="0" max-vertical-offset="2080">
+          <folding>
+            <element signature="e#0#486#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -1,6 +1,33 @@
-//
-// CleanerScoreScene class
-//
+/**
+ * @GameName :
+ * popstar
+ *
+ * @DevelopTool:
+ * Cocos2d-x Editor (CocosEditor)
+ *
+ * @time
+ * 2014-02-23 pm
+ *
+ * @Licensed:
+ * This showcase is licensed under GPL.
+ *
+ * @Authors:
+ * Programmer: touchSnow
+ *
+ * @Links:
+ * http://www.cocos2d-x.com/ (cocos官方)
+ * https://github.com/makeapp      （github）
+ * http://blog.csdn.net/touchsnow (csdn博客)
+ * http://blog.makeapp.co/ （官方博客）
+ * http://www.cocoseditor.com/ （建设中官网）
+ *
+ * @Contact
+ * 邮箱：zuowen@makeapp.co
+ * qq群：232361142
+ *
+ */
+
+
 var StartLayer = function ()
 {
     cc.log("StartLayer");
