@@ -34,43 +34,64 @@ PS_MAIN_TEXTURE = {
 PS_MAIN_SOUNDS = {
     click: "Resources/sounds/click.mp3",
     broken: "Resources/sounds/broken.mp3",
-    select: "Resources/sounds/select.mp3"
+    select: "Resources/sounds/select.mp3",
+    gameover: "Resources/sounds/gameover.mp3",
+    stageclear: "Resources/sounds/stageclear.mp3",
+    win: "Resources/sounds/win.mp3"
 };
 
 
-var MainLayer = function () {
+var MainLayer = function ()
+{
     this.pauseNode = this.pauseNode || {};
     cc.log("MainLayer");
     this.numX = 10;
     this.numY = 10;
     this.starSize = 72;
     this.sameColorList = [];
+
+    //fonts
+    this.bestScoreFont = {};
+    this.stageFont = {};
+    this.targetFont = {};
+    this.scoreFont = {};
+    this.scoreTipLabel = {};
+    this.tipLabel = {};
+
+    this.nextSprite = {};
+    this.nextLevelLabel = {};
+    this.nextTargetLabel = {};
+
+    this.totalScore = 0;
+
+    this.isClear = false;
 };
 
-MainLayer.prototype.onDidLoadFromCCB = function () {
+MainLayer.prototype.onDidLoadFromCCB = function ()
+{
     if (sys.platform == 'browser') {
         this.onEnter();
     }
     else {
-        this.rootNode.onEnter = function () {
+        this.rootNode.onEnter = function ()
+        {
             this.controller.onEnter();
         };
     }
 
-    this.rootNode.onExit = function () {
-        this.controller.onExit();
-    };
-
-    this.rootNode.onTouchesBegan = function (touches, event) {
+    this.rootNode.onTouchesBegan = function (touches, event)
+    {
         this.controller.onTouchesBegan(touches, event);
         return true;
     };
 
-    this.rootNode.onTouchesMoved = function (touches, event) {
+    this.rootNode.onTouchesMoved = function (touches, event)
+    {
         this.controller.onTouchesMoved(touches, event);
         return true;
     };
-    this.rootNode.onTouchesEnded = function (touches, event) {
+    this.rootNode.onTouchesEnded = function (touches, event)
+    {
         this.controller.onTouchesEnded(touches, event);
         return true;
     };
@@ -78,22 +99,48 @@ MainLayer.prototype.onDidLoadFromCCB = function () {
     this.rootNode.setTouchEnabled(true);
 };
 
-MainLayer.prototype.onEnter = function () {
+MainLayer.prototype.onEnter = function ()
+{
     cc.log("onEnter");
+    this.canTouch = true;
     this.pauseNode.setZOrder(120);
+
+    //init stars
     this.initStarTable();
+
+    //stage
+    this.stageFont.setString(currentLevel + "");
+
+    //target  score
+    this.targetScore = 1000 * (1 + currentLevel) * currentLevel / 2;
+    this.targetFont.setString(this.targetScore + "");
+
+    //score
+    this.totalScore = currentLevelScore;
+    this.scoreFont.setString(this.totalScore + "");
+
+    //score tip
+    this.scoreTipLabel.setVisible(false);
+    this.tipLabel.setVisible(false);
+    this.tipLabel.setZOrder(10);
+
+    //best score
+    this.bestScore = sys.localStorage.getItem("starBestScore");
+    if (this.bestScore != null && this.bestScore != undefined) {
+        this.bestScore = Number(this.bestScore);
+    }
+    else {
+        this.bestScore = 0;
+    }
+    this.bestScoreFont.setString(this.bestScore + "");
 }
 
-MainLayer.prototype.initStarTable = function () {
+MainLayer.prototype.initStarTable = function ()
+{
     this.starTable = new Array(this.numX);
     for (var i = 0; i < this.numX; i++) {
         var sprites = new Array(this.numY);
         for (var j = 0; j < this.numY; j++) {
-            /*if (i == 2) {
-             sprites[j] = null;
-             continue;
-             }*/
-
             var pSprite0 = this.getRandomStar(i, j);
             if (pSprite0 != null) {
                 this.rootNode.addChild(pSprite0);
@@ -105,8 +152,8 @@ MainLayer.prototype.initStarTable = function () {
     }
 }
 
-MainLayer.prototype.getRandomStar = function (colIndex, rowIndex) {
-
+MainLayer.prototype.getRandomStar = function (colIndex, rowIndex)
+{
     var stars = PS_MAIN_TEXTURE.STARS;
     var colors = ["blue", "green", "purple", "red", "yellow"];
     var random = getRandom(stars.length);
@@ -114,45 +161,36 @@ MainLayer.prototype.getRandomStar = function (colIndex, rowIndex) {
     var starSprite = cc.Sprite.createWithSpriteFrameName(randomStar);
     starSprite.setAnchorPoint(cc.p(0.5, 0.5));
     starSprite.setPosition(cc.p(36 + colIndex * this.starSize,
-        1300));
+            1300));
     starSprite.starData = {name: randomStar, color: colors[random], indexOfColumn: colIndex, indexOfRow: rowIndex};
     starSprite.setZOrder(100);
 
     var flowTime = rowIndex / 10;
     var fallAction = cc.MoveTo.create(flowTime, cc.p(36 + colIndex * this.starSize,
-        36 + rowIndex * this.starSize));
+            36 + rowIndex * this.starSize));
     starSprite.runAction(fallAction);
     return starSprite;
-}
+};
 
 
-MainLayer.prototype.onUpdate = function () {
-
-}
-
-MainLayer.prototype.onExitClicked = function () {
-    cc.log("onExitClicked");
-}
-
-
-MainLayer.prototype.onExit = function () {
-    cc.log("onExit");
-}
-
-MainLayer.prototype.onPauseClicked = function () {
+MainLayer.prototype.onPauseClicked = function ()
+{
     this.pauseNode.setVisible(true);
-}
+};
 
-MainLayer.prototype.onResumeClicked = function () {
+MainLayer.prototype.onResumeClicked = function ()
+{
     this.pauseNode.setVisible(false);
-}
+};
 
 
-MainLayer.prototype.onSaveExitClicked = function () {
+MainLayer.prototype.onSaveExitClicked = function ()
+{
     cc.BuilderReader.runScene("", "StartLayer");
 }
 
-MainLayer.prototype.checkOneStarFourSide = function (sprite) {
+MainLayer.prototype.checkOneStarFourSide = function (sprite)
+{
     if (sprite == null) {
         return;
     }
@@ -196,7 +234,8 @@ MainLayer.prototype.checkOneStarFourSide = function (sprite) {
     return fourSideSpriteList;
 }
 
-MainLayer.prototype.checkSameColorStars = function (sprite) {
+MainLayer.prototype.checkSameColorStars = function (sprite)
+{
     if (sprite == null) {
         return;
     }
@@ -220,7 +259,7 @@ MainLayer.prototype.checkSameColorStars = function (sprite) {
             newSameColorList.splice(i, 1);
         }
     }
-    cc.log("sameColorList length==" + this.sameColorList.length);
+    // cc.log("sameColorList length==" + this.sameColorList.length);
     if (this.sameColorList.length > 1) {
         for (var k = 0; k < this.sameColorList.length; k++) {
             var simpleStar = this.sameColorList[k];
@@ -231,8 +270,12 @@ MainLayer.prototype.checkSameColorStars = function (sprite) {
     }
 }
 
-MainLayer.prototype.removeSameColorStars = function () {
-    for (var k = 0; k < this.sameColorList.length; k++) {
+MainLayer.prototype.removeSameColorStars = function ()
+{
+    var length = this.sameColorList.length;
+    this.oneStarScore = 5 * length;
+
+    for (var k = 0; k < length; k++) {
         var simpleStar = this.sameColorList[k];
         if (simpleStar) {
             var col = simpleStar.starData.indexOfColumn;
@@ -243,14 +286,38 @@ MainLayer.prototype.removeSameColorStars = function () {
                 var starParticle = cc.StarParticle.create(this.rootNode, (36 + col * this.starSize), (36 + row * this.starSize), "spark");
                 starParticle.runAction(cc.Sequence.create(cc.DelayTime.create(0.8), cc.CleanUp.create(starParticle)));
             }
+
+            var starScoreSprite = cc.StarLabel.createScore(this.rootNode, cc.p((36 + col * this.starSize), (36 + row * this.starSize)), this.oneStarScore + "");
+            starScoreSprite.runAction(cc.Sequence.create(
+                    cc.MoveTo.create(0.3 + k / 20, this.scoreFont.getPosition()),
+                    cc.CleanUp.create(starScoreSprite),
+                    cc.CallFunc.create(function ()
+                    {
+                        this.totalScore += this.oneStarScore;
+                        this.scoreFont.setString(this.totalScore + "");
+                        if (this.totalScore >= this.targetScore) {
+                            if (this.isClear == false) {
+                                this.isClear = true;
+                                this.tipLabel.setVisible(true);
+                                this.tipLabel.setString("Clear!");
+                                this.tipLabel.runAction(cc.Sequence.create(cc.DelayTime.create(1),
+                                        cc.MoveTo.create(1, cc.p(110, 1000))
+                                ));
+                                cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.stageclear);
+                            }
+                        }
+                    }, this)
+            ));
+
         }
     }
     this.sameColorList = [];
     this.fallStar();
-}
+};
 
 
-MainLayer.prototype.fallStar = function () {
+MainLayer.prototype.fallStar = function ()
+{
     for (var i = 0; i < this.starTable.length; i++) {
         var sprites = this.starTable[i];
         var length = sprites.length;
@@ -266,55 +333,81 @@ MainLayer.prototype.fallStar = function () {
                         this.starTable[i].splice(j, 1, upSprite);
                         this.starTable[i].splice(k, 1, null);
                         k = length;
-                        var flowTime = 0.2;
-                        var fallAction = cc.MoveTo.create(flowTime, cc.p(36 + i * this.starSize,
-                            36 + j * this.starSize));
-                        upSprite.runAction(fallAction);
                     }
                     k++;
                 }
             }
         }
     }
+    this.combineStar();
+};
 
-    this.deadStar();
-    // this.combineStar();
-}
 
-MainLayer.prototype.combineStar = function () {
-    for (var m = 0; m < this.starTable.length; m++) {
-        var mSprite0 = this.starTable[m][0];
-        if (mSprite0 == null) {
-            if (m == (this.starTable.length - 1)) {
-                for (var j = 0; j < this.starTable[m].length; j++) {
-                    this.starTable[m].splice(j, 1, null);
-                }
+MainLayer.prototype.checkCombineStar = function ()
+{
+    for (var m = 0; m < (this.starTable.length - 1); m++) {
+        if (this.starTable[m][0] == null && this.starTable[m + 1][0] != null) {
+            return m;
+        }
+    }
+    return -1;
+};
+
+MainLayer.prototype.combineStar = function ()
+{
+    while (this.checkCombineStar() >= 0) {
+        var m = this.checkCombineStar();
+        if (m == (this.starTable.length - 1)) {      //last length
+            for (var k = 0; k < this.starTable[m].length; k++) {
+                this.starTable[m].splice(k, 1, null);
             }
-            else {
-                for (var i = (m + 1); i < this.starTable.length; i++) {
-                    // this.starTable.splice((i - 1), 1, this.starTable[i]);
-                    for (var j = 0; j < this.starTable[i].length; j++) {
-                        var pSprite0 = this.starTable[i][j];
-                        this.starTable[i - 1].splice(j, 1, pSprite0);
-                        if (pSprite0 != null) {
-                            pSprite0.starData.indexOfColumn = (i - 1);
-                            var col = pSprite0.starData.indexOfColumn;
-                            var row = pSprite0.starData.indexOfRow;
-                            var moveAction = cc.MoveTo.create(0.1, cc.p(36 + col * this.starSize,
-                                36 + row * this.starSize));
-                            pSprite0.runAction(moveAction);
-                        }
+        }
+        else {
+            for (var i = (m + 1); i < this.starTable.length; i++) {
+                for (var j = 0; j < this.starTable[i].length; j++) {
+                    if (this.starTable[i][j] != null) {
+                        this.starTable[i][j].starData.indexOfColumn = (i - 1);
+                    }
+                    this.starTable[i - 1].splice(j, 1, this.starTable[i][j]);
+                    if (i == (this.starTable.length - 1)) {
+                        this.starTable[i].splice(j, 1, null);
                     }
                 }
             }
         }
     }
+
+    this.moveStar();
+};
+
+
+MainLayer.prototype.moveStar = function ()
+{
+    for (var i = 0; i < this.starTable.length; i++) {
+        var sprites = this.starTable[i];
+        var length = sprites.length;
+        var jj = i + "==  ";
+        for (var j = 0; j < length; j++) {
+            var pSprite0 = sprites[j];
+            if (pSprite0) {
+                var moveAction = cc.MoveTo.create(0.18, cc.p(36 + i * this.starSize, 36 + j * this.starSize));
+                this.starTable[i][j].runAction(moveAction);
+                jj += pSprite0.starData.color + pSprite0.starData.indexOfColumn + pSprite0.starData.indexOfRow + "    ";
+            }
+            else {
+                jj += "xxx" + i + j + "    ";
+            }
+        }
+        cc.log(jj);
+    }
     this.deadStar();
 }
 
-
-MainLayer.prototype.deadStar = function () {
+MainLayer.prototype.deadStar = function ()
+{
+    cc.log("deadStar");
     var isDead = true;
+    var deadCount = 0;
     for (var i = 0; i < this.starTable.length; i++) {
         var sprites = this.starTable[i];
         var length = sprites.length;
@@ -325,47 +418,136 @@ MainLayer.prototype.deadStar = function () {
                     isDead = false;
                     return;
                 }
+                else {
+                    deadCount += 1;
+                }
             }
         }
     }
 
     if (isDead) {
+        this.canTouch = false;
         for (var jj = 9; jj >= 0; jj--) {
             for (var ii = 0; ii < 10; ii++) {
                 var pSprite0 = this.starTable[ii][jj];
                 if (pSprite0 != null) {
                     var delay = 4 + 0.3 * ii - 0.4 * jj;
                     pSprite0.runAction(cc.Sequence.create(
-                        cc.DelayTime.create(delay),
-                        cc.CleanUp.create(pSprite0)
+                            cc.DelayTime.create(delay),
+                            cc.CleanUp.create(pSprite0)
                     ));
                     var starParticle = cc.StarParticle.create(this.rootNode, (36 + ii * this.starSize), (36 + jj * this.starSize), "spark");
                     starParticle.runAction(cc.Sequence.create(cc.ScaleTo.create(0, 0),
-                        cc.DelayTime.create(delay), cc.ScaleTo.create(0, 1), cc.DelayTime.create(0.8),
-                        cc.CleanUp.create(starParticle)));
+                            cc.DelayTime.create(delay), cc.ScaleTo.create(0, 1), cc.DelayTime.create(0.8),
+                            cc.CleanUp.create(starParticle)));
+
+                    if (deadCount < 10) {
+                        if (deadCount == 0) {
+                            this.totalScore += 1000;
+                            this.scoreFont.setString(this.totalScore + "");
+                        }
+
+                        this.oneDeadStarScore = Math.floor((1000 - deadCount * 100) / deadCount);
+                        this.oneDeadStarScore = this.oneDeadStarScore - this.oneDeadStarScore % 10;
+                        var starScoreSprite = cc.StarLabel.createScore(this.rootNode,
+                                cc.p((36 + ii * this.starSize), (36 + jj * this.starSize)), this.oneDeadStarScore + "");
+                        starScoreSprite.runAction(cc.Sequence.create(
+                                cc.ScaleTo.create(0, 0),
+                                cc.DelayTime.create(delay), cc.ScaleTo.create(0, 1),
+                                cc.MoveTo.create(0.3 + jj / 20, this.scoreFont.getPosition()),
+                                cc.CleanUp.create(starScoreSprite),
+                                cc.CallFunc.create(function ()
+                                {
+                                    this.totalScore += this.oneDeadStarScore;
+                                    this.scoreFont.setString(this.totalScore + "");
+                                }, this)
+                        ));
+                    }
                 }
             }
         }
     }
+
+    var that = this;
+    this.rootNode.scheduleOnce(function ()
+    {
+        that.winStar();
+    }, 5);
+};
+
+MainLayer.prototype.winStar = function ()
+{
+    if (this.isClear == true) {
+        cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.win);
+        cc.Toast.create(this.rootNode, "Win", 3);
+        currentLevel += 1;
+        currentLevelScore = this.totalScore;
+
+        this.nextSprite.setZOrder(100);
+        var that = this;
+        this.rootNode.scheduleOnce(function ()
+        {
+            that.nextLevelLabel.setString("level " + currentLevel + "");
+            that.nextTargetLabel.setString("target " + 1000 * (1 + currentLevel) * currentLevel / 2);
+            that.nextSprite.runAction(cc.Sequence.create(
+                    cc.MoveTo.create(1, cc.p(0, 0)),
+                    cc.DelayTime.create(2),
+                    cc.MoveTo.create(1, cc.p(-730, 0))
+            ))
+        }, 3);
+        this.rootNode.scheduleOnce(function ()
+        {
+            cc.BuilderReader.runScene("", "MainLayer");
+        }, 7);
+    }
+    else {
+        cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.gameover);
+        currentLevel = 1;
+        currentLevelScore = 0;
+        cc.Toast.create(this.rootNode, "lost", 2);
+        this.rootNode.scheduleOnce(function ()
+        {
+            cc.BuilderReader.runScene("", "StartLayer");
+        }, 2)
+    }
+    if (this.totalScore > this.bestScore) {
+        sys.localStorage.setItem("starBestScore", this.totalScore + "");
+    }
+}
+
+MainLayer.prototype.showScoreTip = function ()
+{
+    this.scoreTipLabel.setVisible(true);
+    var length = this.sameColorList.length;
+    var tip = length + " blocks " + length * length * 5 + " points";
+    this.scoreTipLabel.setString(tip);
 }
 
 
-MainLayer.prototype.onTouchesBegan = function (touches, event) {
+MainLayer.prototype.onTouchesBegan = function (touches, event)
+{
+    if (this.canTouch == false) {
+        return;
+    }
+
     var loc = touches[0].getLocation();
     this.ccTouchBeganPos = loc;
-
     for (var i = 0; i < this.starTable.length; i++) {
-        var sprites = this.starTable[i];
-        for (var j = 0; j < sprites.length; j++) {
-            var pSprite0 = sprites[j];
-            if (pSprite0) {
-                var ccRect = pSprite0.getBoundingBox();
-                if (isInRect(ccRect, this.ccTouchBeganPos)) {
+        // var sprites = this.starTable[i];
+        for (var j = 0; j < this.starTable[i].length; j++) {
+            // var pSprite0 = sprites[j];
+            if (this.starTable[i][j] && this.starTable[i][j] != null) {
+                //var ccRect = pSprite0.getBoundingBox();
+                var ccRect = cc.rectCreate(this.starTable[i][j].getPosition(), [36, 36]);
+                var pSprite0 = this.starTable[i][j];
+                if (cc.rectContainsPoint(ccRect, this.ccTouchBeganPos)) {
                     if (this.sameColorList.length > 1) {
                         if (this.sameColorList.contains(pSprite0)) {
                             cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.broken, false);
                             this.removeSameColorStars();
-                        } else {
+                            this.scoreTipLabel.setVisible(false);
+                        }
+                        else {
                             for (var k = 0; k < this.sameColorList.length; k++) {
                                 if (this.sameColorList[k]) {
                                     this.sameColorList[k].runAction(cc.ScaleTo.create(0.1, 1));
@@ -374,15 +556,23 @@ MainLayer.prototype.onTouchesBegan = function (touches, event) {
                             this.checkSameColorStars(pSprite0);
                             if (this.sameColorList.length > 1) {
                                 cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.select, false);
+                                this.showScoreTip();
+                            }
+                            else {
+                                this.scoreTipLabel.setVisible(false);
                             }
                         }
-                    } else {
+                    }
+                    else {
                         this.checkSameColorStars(pSprite0);
                         if (this.sameColorList.length > 1) {
                             cc.AudioEngine.getInstance().playEffect(PS_MAIN_SOUNDS.select, false);
+                            this.showScoreTip();
+                        }
+                        else {
+                            this.scoreTipLabel.setVisible(false);
                         }
                     }
-
                     break;
                 }
             }
@@ -391,23 +581,13 @@ MainLayer.prototype.onTouchesBegan = function (touches, event) {
 };
 
 
-MainLayer.prototype.onTouchesMoved = function (touches, event) {
+MainLayer.prototype.onTouchesMoved = function (touches, event)
+{
 }
 
-MainLayer.prototype.onTouchesEnded = function (touches, event) {
+MainLayer.prototype.onTouchesEnded = function (touches, event)
+{
 }
 
 
-function getRandom(maxSize) {
-    return Math.floor(Math.random() * maxSize) % maxSize;
-}
-
-function isInRect(ccRect, ccTouchBeganPos) {
-    if (ccTouchBeganPos.x > ccRect.x && ccTouchBeganPos.x < (ccRect.x + ccRect.width)) {
-        if (ccTouchBeganPos.y > ccRect.y && ccTouchBeganPos.y < (ccRect.y + ccRect.height)) {
-            return true;
-        }
-    }
-    return false;
-}
 

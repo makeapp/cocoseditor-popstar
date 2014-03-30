@@ -92,6 +92,7 @@ StartLayer.prototype.onStartClicked = function ()
     this.newGame.runAction(cc.Sequence.create(cc.ScaleTo.create(0.1, 1.1), cc.DelayTime.create(0.5),
             cc.CallFunc.create(function ()
             {
+                cc.AudioEngine.getInstance().stopAllEffects();
                 cc.BuilderReader.runScene("", "MainLayer");
             }, this)
     ));

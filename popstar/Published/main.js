@@ -116,6 +116,53 @@ cc.StarParticle.create = function (node, x, y, name)
     particle.setZOrder(120);
     node.addChild(particle);
     return particle;
+};
+
+cc.StarLabel = {};
+cc.StarLabel.createScore = function (node, p, message)
+{
+    var label = cc.LabelTTF.create(message, "Arial", 30);
+    label.setPosition(p);
+    label.setColor(cc.c3b(255, 255, 255));
+    label.setZOrder(10000);
+    node.addChild(label);
+    return label;
+};
+
+cc.StarLabel.createTip = function (node, p, message)
+{
+    var label = cc.LabelTTF.create(message, "Arial", 30);
+    label.setPosition(p);
+    label.setColor(cc.c3b(255, 255, 255));
+    label.setZOrder(10000);
+    node.addChild(label);
+    return label;
+};
+
+cc.Toast = {};
+cc.Toast.create = function (node, message, delay)
+{
+    cc.log("toast");
+    var director = cc.Director.getInstance();
+    var size = director.getWinSize();
+    var label = cc.LabelTTF.create(message, "Arial", 40);
+    label.setPosition(size.width / 2, size.height / 2 + 100);
+    label.setColor(cc.c3b(255, 255, 255));
+    label.setZOrder(10000);
+    node.addChild(label);
+    label.runAction(cc.Sequence.create(cc.DelayTime.create(delay), cc.CleanUp.create(label)));
+    return label;
+};
+
+cc.rectCreate = function (p, area)
+{
+    return  cc.rect(p.x - area[0], p.y - area[1], area[0] * 2, area[1] * 2);
+}
+
+
+function getRandom(maxSize)
+{
+    return Math.floor(Math.random() * maxSize) % maxSize;
 }
 
 Array.prototype.contains = function (value)
@@ -127,6 +174,10 @@ Array.prototype.contains = function (value)
     }
     return false;
 }
+
+currentLevel = 1;
+currentLevelScore = 0;
+
 
 var ccb_resources = [
 

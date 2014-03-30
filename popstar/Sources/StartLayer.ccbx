@@ -35,12 +35,21 @@
           anchorPointX="0.5" anchorPointY="0.5" ignoreAnchorPoint="true"
           scaleX="1" scaleY="1"
           touchEnabled="true" positionType="Percent">
-  <Sprite positionType="LeftBottom"  positionX="0" positionY="0" anchorPointX="0"
-                                         anchorPointY="0" src="Resources/bg_main.png" width="720.0" height="1280.0"/>
-    <Sprite positionType="LeftBottom"  positionX="260.0" positionY="979.0" anchorPointX="0.5"
-                                         anchorPointY="0.5" src="Resources/star_packer.plist/pop.png" width="454.0" height="278.0" var="pop" target="Doc"/>
-    <Sprite positionType="LeftBottom"  positionX="488.0" positionY="786.0" anchorPointX="0.5"
-                                         anchorPointY="0.5" src="Resources/star_packer.plist/star.png" width="425.0" height="216.0" var="star" target="Doc"/>
+    <Sprite positionType="LeftBottom" positionX="0" positionY="0" anchorPointX="0"
+            anchorPointY="0" src="Resources/bg_main.png" width="720.0" height="1280.0">
+      <LabelTTF positionType="LeftBottom" positionX="347.0" positionY="127.0" anchorPointX="0.5"
+                anchorPointY="0.5" text="作者：TouchSnow 工具：CocosEditor  时间：2014-02-23"
+                fontSize="20" color="#ffffffff"/>
+      <LabelTTF positionType="LeftBottom" positionX="352.0" positionY="16.0" anchorPointX="0.5"
+                anchorPointY="0.5" text="更多开源游戏源码请进入官方博客：www.blog.makeapp.co" fontSize="18" color="#ffff27ee"/>
+      <LabelTTF positionType="LeftBottom" positionX="348.0" positionY="49.0"
+                anchorPointX="0.5" anchorPointY="0.5" text="csdn博客：http://blog.csdn.net/touchsnow"
+                fontSize="18" color="#ffff27ee"/>
+    </Sprite>
+    <Sprite positionType="LeftBottom" positionX="260.0" positionY="979.0" anchorPointX="0.5"
+            anchorPointY="0.5" src="Resources/star_packer.plist/pop.png" width="454.0" height="278.0" var="pop" target="Doc"/>
+    <Sprite positionType="LeftBottom" positionX="488.0" positionY="786.0" anchorPointX="0.5"
+            anchorPointY="0.5" src="Resources/star_packer.plist/star.png" width="425.0" height="216.0" var="star" target="Doc"/>
     <Menu positionType="LeftBottom" positionX="0" positionY="1300" anchorPointX="0.5"
           anchorPointY="0.5" var="menus" target="Doc">
       <MenuItem positionType="LeftBottom" positionX="359.0" positionY="563.0" anchorPointX="0.5"

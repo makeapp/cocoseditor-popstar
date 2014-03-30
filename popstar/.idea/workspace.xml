@@ -77,13 +77,14 @@
         <option value="$PROJECT_DIR$/Sources/Resources/particles/leaf_open.plist" />
         <option value="$PROJECT_DIR$/Sources/Resources/star_packer.plist" />
         <option value="$PROJECT_DIR$/Sources/TestLayer.ccbx" />
-        <option value="$PROJECT_DIR$/Sources/MainLayer.ccbx" />
         <option value="$PROJECT_DIR$/Sources/Resources/particles/spark.plist" />
         <option value="$PROJECT_DIR$/Sources/main.xml" />
+        <option value="$PROJECT_DIR$/Published/main.js" />
+        <option value="$PROJECT_DIR$/Sources/MainLayer.ccbx" />
+        <option value="$PROJECT_DIR$/Sources/main.js" />
         <option value="$PROJECT_DIR$/Sources/StartLayer.ccbx" />
         <option value="$PROJECT_DIR$/Sources/StartLayer.js" />
         <option value="$PROJECT_DIR$/Sources/MainLayer.js" />
-        <option value="$PROJECT_DIR$/Sources/main.js" />
       </list>
     </option>
   </component>
@@ -121,7 +122,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -141,8 +141,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popstar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="popstar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Published" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,15 +170,15 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="145" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="151" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="330" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="true" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../popstar.android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../makeapp/other/moon-android" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -430,16 +445,18 @@
       <workItem from="1394593207463" duration="3324000" />
       <workItem from="1394622403915" duration="3610000" />
       <workItem from="1394712393682" duration="657000" />
-      <workItem from="1395502343828" duration="782000" />
+      <workItem from="1395502343828" duration="1729000" />
+      <workItem from="1396090922287" duration="14013000" />
+      <workItem from="1396155648694" duration="15912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59782000" />
+    <option name="totallyTimeSpent" value="90654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="1" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -460,8 +477,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22390318" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3905724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21331316" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.506734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -522,11 +539,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/s_number_score.fnt">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400" />
-      </provider>
       <provider selected="true" editor-type-id="BMFont">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/main.js">
@@ -560,19 +577,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/titleinfo.fnt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
-      </provider>
       <provider editor-type-id="BMFont">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/s_number_member_small.fnt">
-      <provider editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/s_number_member_small.fnt">
       <provider selected="true" editor-type-id="BMFont">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/fire.png">
@@ -583,11 +600,6 @@
     <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/highscore.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://D:/develop/cocos2dx/Cocos2d-html5-v2.1.4/cocos2d/actions/CCActionInterval.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="620" column="0" selection-start="17586" selection-end="17586" vertical-scroll-proportion="-2.481982" vertical-offset="9742" max-vertical-offset="29760" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Published/MainLayer.ccbx">
@@ -612,11 +624,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/fonts/s_number_score.fnt">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
-      </provider>
       <provider selected="true" editor-type-id="BMFont">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="541" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/E4X.js">
@@ -628,22 +640,22 @@
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
-      </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/spark.plist">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2240" />
-      </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/main.xml">
@@ -656,25 +668,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.ccbx">
-      <provider selected="true" editor-type-id="Cocos2dx">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/Resources/particles/quanquan.plist">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
-      </provider>
       <provider selected="true" editor-type-id="Partices">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2300" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
@@ -708,35 +710,64 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5000" />
       </provider>
     </entry>
+    <entry file="file://D:/develop/cocos2dx/Cocos2d-html5-v2.1.4/cocos2d/cocoa/CCGeometry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="3" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="7180" />
+      </provider>
+    </entry>
+    <entry file="file://D:/develop/cocos2dx/Cocos2d-html5-v2.1.4/cocos2d/actions/CCActionInterval.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="783" column="4" selection-start="22269" selection-end="22269" vertical-scroll-proportion="0.0" vertical-offset="10900" max-vertical-offset="29840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Published/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="19" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.5643739" vertical-offset="1940" max-vertical-offset="4080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.ccbx">
+      <provider selected="true" editor-type-id="Cocos2dx">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="43" column="81" selection-start="1428" selection-end="1428" vertical-scroll-proportion="0.0" vertical-offset="584" max-vertical-offset="2180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/StartLayer.ccbx">
       <provider selected="true" editor-type-id="Cocos2dx">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1220">
+        <state line="39" column="6" selection-start="1241" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1400">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="112" selection-end="112" vertical-scroll-proportion="0.28218696" vertical-offset="0" max-vertical-offset="4000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="3" selection-start="486" selection-end="486" vertical-scroll-proportion="0.97472924" vertical-offset="0" max-vertical-offset="8380">
+        <state line="177" column="0" selection-start="4152" selection-end="4192" vertical-scroll-proportion="0.42328042" vertical-offset="3300" max-vertical-offset="5020">
           <folding>
-            <element signature="e#0#486#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/StartLayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="486" selection-end="486" vertical-scroll-proportion="0.95238096" vertical-offset="0" max-vertical-offset="2080">
+        <state line="95" column="62" selection-start="2252" selection-end="2252" vertical-scroll-proportion="1.388007" vertical-offset="1113" max-vertical-offset="2100">
+          <folding>
+            <element signature="e#0#486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/MainLayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="457" column="33" selection-start="14548" selection-end="14548" vertical-scroll-proportion="0.97472924" vertical-offset="8600" max-vertical-offset="11980">
           <folding>
             <element signature="e#0#486#0" expanded="true" />
           </folding>
