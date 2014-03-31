@@ -63,7 +63,17 @@
     <favorites_list name="popstar" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sources/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="156" column="0" selection-start="3759" selection-end="3874" vertical-scroll-proportion="0.42328042" vertical-offset="2880" max-vertical-offset="5020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -151,7 +161,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Published" />
+              <option name="myItemId" value="Sources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,15 +457,15 @@
       <workItem from="1394712393682" duration="657000" />
       <workItem from="1395502343828" duration="1729000" />
       <workItem from="1396090922287" duration="14013000" />
-      <workItem from="1396155648694" duration="15912000" />
+      <workItem from="1396155648694" duration="16946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90654000" />
+    <option name="totallyTimeSpent" value="91688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -477,8 +487,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21331316" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.506734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21028744" sideWeight="0.8215488" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.506734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Animations&#9;" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -712,12 +722,19 @@
     </entry>
     <entry file="file://D:/develop/cocos2dx/Cocos2d-html5-v2.1.4/cocos2d/cocoa/CCGeometry.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="3" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="7180" />
+        <state line="57" column="3" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="7180">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://D:/develop/cocos2dx/Cocos2d-html5-v2.1.4/cocos2d/actions/CCActionInterval.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="783" column="4" selection-start="22269" selection-end="22269" vertical-scroll-proportion="0.0" vertical-offset="10900" max-vertical-offset="29840" />
+        <state line="783" column="4" selection-start="22269" selection-end="22269" vertical-scroll-proportion="0.0" vertical-offset="10900" max-vertical-offset="29840">
+          <folding>
+            <element signature="e#22239#22263#0" expanded="false" />
+            <element signature="e#22269#22391#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Published/main.js">
@@ -747,20 +764,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="0" selection-start="4152" selection-end="4192" vertical-scroll-proportion="0.42328042" vertical-offset="3300" max-vertical-offset="5020">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/StartLayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="62" selection-start="2252" selection-end="2252" vertical-scroll-proportion="1.388007" vertical-offset="1113" max-vertical-offset="2100">
           <folding>
-            <element signature="e#0#486#0" expanded="true" />
+            <element signature="e#0#486#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,6 +779,13 @@
           <folding>
             <element signature="e#0#486#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="0" selection-start="3759" selection-end="3874" vertical-scroll-proportion="0.42328042" vertical-offset="2880" max-vertical-offset="5020">
+          <folding />
         </state>
       </provider>
     </entry>
